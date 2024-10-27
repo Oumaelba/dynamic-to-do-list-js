@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	function addTask(){
 		let taskText = taskInput.value.trim();
 		
-		if (taskText === "" || taskList == null){
+		if (taskText === ""){
 			alert("Please enter a task");
 			return;
 		}else{
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			// Add event listener to remove the task item
 			rmvBtn.addEventListener('click', function(){
 				taskElement.remove();
-			})
+			});
 
 			// Append the remove button to the list item
 			taskElement.appendChild(rmvBtn);
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			// Clear the input field
 			taskInput.value = "";
 			}
-
+		}
 		// Attach event listener to the Add Task button
 		addButton.addEventListener('click', addTask);
 
@@ -43,6 +43,5 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (event.key === "Enter"){
 				addTask();
 			}
-		})
-		}
-	})
+		});
+	});
